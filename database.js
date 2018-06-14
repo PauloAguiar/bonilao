@@ -116,15 +116,17 @@ exports.getPoints = function() {
                                         if (match.score1 === entry.guess.score1 && match.score2 === entry.guess.score2)
                                         {
                                                 console.log(3);
-                                                points[entry.id].points += 3;
+                                                points[entry.id].points += 6;
                                         }
-                                        else if ((match.score1 - match.score2 >= 0
-                                                  && entry.guess.score1 - entry.guess.score2 >= 0)
+                                        else if ((match.score1 - match.score2 > 0
+                                                  && entry.guess.score1 - entry.guess.score2 > 0)
                                                 || (match.score1 - match.score2 < 0
-                                                    && entry.guess.score1 - entry.guess.score2 < 0))
+                                                    && entry.guess.score1 - entry.guess.score2 < 0)
+                                                || (match.score1 === match.score2
+                                                        && entry.guess.score1 === entry.guess.score2))
                                         {
                                                 console.log(1);
-                                                points[entry.id].points += 1;
+                                                points[entry.id].points += 3;
                                         }
                                 }
                         });
