@@ -16,32 +16,21 @@
           <div class="row">
             <div class="container">
               <div class="list-group">
+                <% points.forEach(function(entry, index) { %>
                 <div class="list-group-item">
                   <div class="row">
                     <div class="col-2 float-left">
-                      <img src="img\flags\brazil.png" class="img-fluid rounded float-left">
+                      <img src="<%= entry.photo %>" class="img-fluid rounded float-left">
                     </div>
                     <div class="col-7">
-                      <span class="md text-right">Paulo Henrique</span>
+                      <span class="md text-right"><%= entry.name %></span>
                     </div>
                     <div class="col-3">
-                      <span class="md text-center">100</span>
+                      <span class="md text-center ranking-points"><%= entry.points %></span>
                     </div>
                   </div>
                 </div>
-                <div class="list-group-item">
-                  <div class="row">
-                    <div class="col-2 float-left">
-                      <img src="img\flags\brazil.png" class="img-fluid rounded float-left">
-                    </div>
-                    <div class="col-7">
-                      <span class="md text-right">Paulo Henrique</span>
-                    </div>
-                    <div class="col-3">
-                      <span class="md text-center">100</span>
-                    </div>
-                  </div>
-                </div>
+                <% }); %>
               </div>
             </div>
           </div>

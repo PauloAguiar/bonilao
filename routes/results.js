@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 
   //endDate.setHours(endDate.getHours() + 96);
 
-  var matches = database.getMatches(startDate,  endDate);
+  var matches = database.getResults(startDate,  endDate);
   
   matches.sort(function(a, b) {
     return b.time - a.time;

@@ -14,5 +14,11 @@ body {
 .guess-score {
   font-weight: bold;
   vertical-align: middle;
-  font-size: .8em;
+  font-size: 1.2em;
+}
+
+.ranking-points {
+  font-weight: bold;
+  vertical-align: middle;
+  font-size: 1.4em;
 }
