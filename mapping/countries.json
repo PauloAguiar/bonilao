@@ -1,0 +1,130 @@
+{
+        "ARG":{
+                "name": "Argentina",
+                "flag": "img/flags/argentina.png"
+        },
+        "AUS":{
+                "name": "Austrália",
+                "flag": "img/flags/australia.png"
+        },
+        "BEL":{
+                "name": "Bélgica",
+                "flag": "img/flags/belgium.png"
+        },
+        "BRA":{
+                "name": "Brasil",
+                "flag": "img/flags/brazil.png"
+        },
+        "COL":{
+                "name": "Colombia",
+                "flag": "img/flags/colombia.png"
+        },
+        "CRC":{
+                "name": "Costa Rica",
+                "flag": "img/flags/costa_rica.png"
+        },
+        "CRO":{
+                "name": "Croácia",
+                "flag": "img/flags/croatia.png"
+        },
+        "DEN":{
+                "name": "Dinamarca",
+                "flag": "img/flags/denmark.png"
+        },
+        "EGY":{
+                "name": "Egito",
+                "flag": "img/flags/egypt.png"
+        },
+        "ENG":{
+                "name": "Inglaterra",
+                "flag": "img/flags/england.png"
+        },
+        "ESP":{
+                "name": "Espanha",
+                "flag": "img/flags/spain.png"
+        },
+        "FRA":{
+                "name": "França",
+                "flag": "img/flags/france.png"
+        },
+        "GER":{
+                "name": "Alemanha",
+                "flag": "img/flags/germany.png"
+        },
+        "IRN":{
+                "name": "Irã",
+                "flag": "img/flags/iran.png"
+        },
+        "ISL":{
+                "name": "Islândia",
+                "flag": "img/flags/iceland.png"
+        },
+        "JPN":{
+                "name": "Japão",
+                "flag": "img/flags/japan.png"
+        },
+        "KOR":{
+                "name": "Coréia do Sul",
+                "flag": "img/flags/south_korea.png"
+        },
+        "KSA":{
+                "name": "Arábia Saudita",
+                "flag": "img/flags/saudi_arabia.png"
+        },
+        "MAR":{
+                "name": "Marrocos",
+                "flag": "img/flags/morocco.png"
+        },
+        "MEX":{
+                "name": "México",
+                "flag": "img/flags/mexico.png"
+        },
+        "NGA":{
+                "name": "Nigéria",
+                "flag": "img/flags/nigeria.png"
+        },
+        "PAN":{
+                "name": "Panamá",
+                "flag": "img/flags/panama.png"
+        },
+        "PER":{
+                "name": "Peru",
+                "flag": "img/flags/peru.png"
+        },
+        "POL":{
+                "name": "Polônia",
+                "flag": "img/flags/poland.png"
+        },
+        "POR":{
+                "name": "Portugal",
+                "flag": "img/flags/portugal.png"
+        },
+        "RUS":{
+                "name": "Russia",
+                "flag": "img/flags/russia.png"
+        },
+        "SEN":{
+                "name": "Senegal",
+                "flag": "img/flags/senegal.png"
+        },
+        "SRB":{
+                "name": "Sérvia",
+                "flag": "img/flags/serbia.png"
+        },
+        "SUI":{
+                "name": "Suiça",
+                "flag": "img/flags/switzerland.png"
+        },
+        "SWE":{
+                "name": "Suécia",
+                "flag": "img/flags/sweden.png"
+        },
+        "TUN":{
+                "name": "Tunísia",
+                "flag": "img/flags/tunisia.png"
+        },
+        "URU":{
+                "name": "Uruguai",
+                "flag": "img/flags/uruguay.png"
+        }
+}

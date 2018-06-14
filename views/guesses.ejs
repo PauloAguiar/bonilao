@@ -14,51 +14,48 @@
         <div class="row">
           <div class="container">
             <div class="list-group">
+              <% matches.forEach(function(match, index) { %>
               <div class="list-group-item">
                 <div class="row">
                   <div class="col-2 float-left">
-                      <img src="img\flags\brazil.png" class="img-fluid rounded float-left">
+                      <img src="<%= match.team1.flag %>" class="img-fluid rounded float-left">
                   </div>
                   <div class="col-8">
                     <div class="row mb-2">
                         <div class="col-5 text-truncate text-center">
-                            <span>Brasil</span>
+                            <span><%= match.team1.name %></span>
                         </div>
                         <div class="col-2 text-center">
                             <span>x</span>
                         </div>
                         <div class="col-5 text-truncate text-center">
-                            <span>Argentina</span>
+                            <span><%= match.team2.name %></span>
                         </div>
                     </div>
+                    <% if (match.guesses.length > 0) { %>
+                    <% match.guesses.forEach(function(entry, index) { %>
                     <div class="row">
                         <div class="mb-1 p-0 col-2 float-left">
-                            <img src="img\flags\argentina.png" class="img-fluid rounded">
+                            <img src="<%= entry.photo %>" class="img-fluid rounded">
                         </div>
                         <div class="col-7 text-truncate text-center">
-                            <span class="guess-name">Paulo Henrique</span>
+                            <span class="guess-name"><%= entry.name %></span>
                         </div>
                         <div class="col-3 text-truncate float-left">
-                            <span class="guess-score">2 x 1</span>
+                            <span class="guess-score"><%= entry.guess.score1 %> x <%= entry.guess.score2 %></span>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="mb-1 p-0 col-2 float-left">
-                            <img src="img\flags\argentina.png" class="img-fluid rounded">
-                        </div>
-                        <div class="col-7 text-truncate text-center">
-                            <span class="guess-name">Paulo Henrique</span>
-                        </div>
-                        <div class="col-3 text-truncate float-left">
-                            <span class="guess-score">2 x 1</span>
-                        </div>
-                    </div>
+                    <% }); %>
+                    <% } else { %>
+                        <span>Nenhum palpite.</span>
+                    <% } %>
                   </div>
                   <div class="col-2 float-left">
-                      <img src="img\flags\argentina.png" class="img-fluid rounded float-left">
+                      <img src="<%= match.team2.flag %>" class="img-fluid rounded float-left">
                   </div>
                 </div>
               </div>
+              <% }); %>
             </div>
           </div>
         </div>
