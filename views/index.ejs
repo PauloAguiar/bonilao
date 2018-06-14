@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <% include ./partials/head %>
-  </head>
+  <% include ./partials/head %>
   <body>
-    <% include ./partials/header %>
-    <div class="container">
-      <div>
-        <h1>Welcome to <%= siteTitle %></h1>
-        <p class="lead">This is where content for "<%=title%>" lives</p>
+    <body>
+      <% include ./partials/header %>
+      <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center">
+        <main role="main" class="inner cover">
+          <h1 class="cover-heading">Bonilão 2018.</h1>
+          <p class="lead">Mais uma vez chegou a hora de mostrar todo o seu conhecimento no bolão mais resenha do Brasil!</p>
+          <p class="lead">Boa copa a todos e bora Brasil minha porra!</p>
+          <img src="img\flags\brazil.png" class="mb-3 img-fluid rounded">
+        </main>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+        </p>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+        </p>
       </div>
-    </div><!-- /.container -->
-  </body>
+      
+      <% include ./partials/scripts %>
+    </body>
  </html>
