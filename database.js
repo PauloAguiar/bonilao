@@ -52,11 +52,78 @@ exports.getResults = function () {
         return result;
 };
 
+exports.getPoints = function () {
+        var result = [];
+
+        matches.rounds.forEach(round => {
+                round.matches.forEach(match => {
+                        if (match.score1 !== null && match.score2 !== null)
+                        {
+                                var points = [];
+                                var guesses = getGuesses(match.num);
+
+                                guesses.forEach(function(entry, index) {
+                                        var guessResult = {};
+                                        if (points[entry.id] === undefined)
+                                        {
+                                                guessResult = {
+                                                        name: people[entry.id].name,
+                                                        photo: people[entry.id].photo,
+                                                        guess: people[entry.id].guesses[match.num],
+                                                        points: 0
+                                                }
+                                        }
+        
+                                        if (match.score1 !== null && match.score2 !== null)
+                                        {
+                                                if (match.score1 === entry.guess.score1 && match.score2 === entry.guess.score2)
+                                                {
+                                                        console.log(3);
+                                                        guessResult.points = 6;
+                                                }
+                                                else if ((match.score1 - match.score2 > 0
+                                                          && entry.guess.score1 - entry.guess.score2 > 0)
+                                                        || (match.score1 - match.score2 < 0
+                                                            && entry.guess.score1 - entry.guess.score2 < 0)
+                                                        || (match.score1 === match.score2
+                                                                && entry.guess.score1 === entry.guess.score2))
+                                                {
+                                                        console.log(1);
+                                                        guessResult.points = 3;
+                                                }
+                                        }
+
+                                        points.push(guessResult);
+                                });
+
+                                points.sort(function(a, b) {
+                                        return b.points - a.points;
+                                });
+
+                                var date = new Date(Date.parse(match.date + " " + match.time + " " + match.timezone));
+
+                                var object = {
+                                        'team1': countries[match.team1.code],
+                                        'team2': countries[match.team2.code],
+                                        'time': date,
+                                        'score1': match.score1,
+                                        'score2': match.score2,
+                                        'points': points
+                                };
+
+                                result.push(object);
+                        }
+                });
+        });
+
+        return result;
+};
+
 exports.getMatches = function (startDate, endDate) {
         var result = [];
         matches.rounds.forEach(round => {
                 round.matches.forEach(match => {
-                        var date = new Date(Date.parse(match.date + " " + match.time));
+                        var date = new Date(Date.parse(match.date + " " + match.time + " " + match.timezone));
                         if (date >= startDate && date < endDate) 
                         {
                                 var object = {
@@ -67,24 +134,6 @@ exports.getMatches = function (startDate, endDate) {
                                         'score2': match.score2,
                                         'guesses': getGuesses(match.num),
                                 };
-                                var points = 0;
-
-                                object.guesses.forEach(function(guess, index) {
-                                        if (match.score1 !== undefined && match.score2 !== undefined)
-                                        {
-                                                if (match.score1 === guess.score1 && match.score2 === guess.score2)
-                                                {
-                                                        points += 3;
-                                                }
-                                                else if ((match.score1 - match.score2 >= 0
-                                                          && guess.score1 - guess.score2 >= 0)
-                                                        || (match.score1 - match.score2 < 0
-                                                            && guess.score1 - guess.score2 < 0))
-                                                {
-                                                        points += 1;
-                                                }
-                                        }
-                                });
 
                                 result.push(object);
                         }
@@ -94,7 +143,7 @@ exports.getMatches = function (startDate, endDate) {
         return result;
 };
 
-exports.getPoints = function() {
+exports.getRankings = function() {
         var points = {};
 
         matches.rounds.forEach(round => {
@@ -115,7 +164,6 @@ exports.getPoints = function() {
                                 {
                                         if (match.score1 === entry.guess.score1 && match.score2 === entry.guess.score2)
                                         {
-                                                console.log(3);
                                                 points[entry.id].points += 6;
                                         }
                                         else if ((match.score1 - match.score2 > 0
@@ -125,7 +173,6 @@ exports.getPoints = function() {
                                                 || (match.score1 === match.score2
                                                         && entry.guess.score1 === entry.guess.score2))
                                         {
-                                                console.log(1);
                                                 points[entry.id].points += 3;
                                         }
                                 }

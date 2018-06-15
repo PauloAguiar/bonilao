@@ -7,51 +7,52 @@
         <div class="row">
           <h4 class="d-flex align-items-center">
             <i class="title-icon fas fa-user"></i>
-            <strong>Palpites</strong><span> (prox. 24 hrs)</span>
+            <strong>Pontuações</strong>
           </h4>
         </div>
           
         <div class="row">
           <div class="container">
             <div class="list-group">
-              <% matches.forEach(function(match, index) { %>
+              <% points.forEach(function(matchEntry, index) { %>
               <div class="list-group-item">
                 <div class="row">
                   <div class="col-2 float-left">
-                      <img src="<%= match.team1.flag %>" class="img-fluid rounded float-left">
+                      <img src="<%= matchEntry.team1.flag %>" class="img-fluid rounded float-left">
                   </div>
                   <div class="col-8">
                     <div class="row mb-2">
                         <div class="col-5 text-truncate text-center">
-                            <span><%= match.team1.name %></span>
+                            <span><%= matchEntry.team1.name %></span>
                         </div>
-                        <div class="col-2 text-center">
-                            <span>x</span>
+                        <div class="col-2 text-nowrap">
+                            <div><%= matchEntry.score1 %> x <%= matchEntry.score2 %></div>
                         </div>
                         <div class="col-5 text-truncate text-center">
-                            <span><%= match.team2.name %></span>
+                            <span><%= matchEntry.team2.name %></span>
                         </div>
                     </div>
-                    <% if (match.guesses.length > 0) { %>
-                    <% match.guesses.forEach(function(entry, index) { %>
+                    <% if (matchEntry.points.length > 0) { %>
+                    <% matchEntry.points.forEach(function(guessEntry, index) { %>
                     <div class="row">
                         <div class="mb-1 p-0 col-2 float-left">
-                            <img src="<%= entry.photo %>" class="img-fluid rounded">
+                            <img src="<%= guessEntry.photo %>" class="img-fluid rounded">
                         </div>
                         <div class="col-7 text-truncate text-center">
-                            <span class="guess-name"><%= entry.name %></span>
+                            <span class="guess-name"><%= guessEntry.name %></span>
                         </div>
                         <div class="col-3 text-nowrap float-left">
-                            <span class="guess-score"><%= entry.guess.score1 %> x <%= entry.guess.score2 %></span>
+                            <span class="guess-score"><% if(guessEntry.points > 0) { %>+<% } %><%= guessEntry.points %></span>
+                            <span>(<%= guessEntry.guess.score1 %> x <%= guessEntry.guess.score2 %>)</span>
                         </div>
                     </div>
                     <% }); %>
                     <% } else { %>
-                        <span>Nenhum palpite.</span>
+                        <span>Nenhuma pontuação.</span>
                     <% } %>
                   </div>
                   <div class="col-2 float-left">
-                      <img src="<%= match.team2.flag %>" class="img-fluid rounded float-left">
+                      <img src="<%= matchEntry.team2.flag %>" class="img-fluid rounded float-left">
                   </div>
                 </div>
               </div>

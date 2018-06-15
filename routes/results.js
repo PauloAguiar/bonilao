@@ -4,13 +4,7 @@ var database = require('../database');
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
-  var endDate = new Date(Date.now());
-  var startDate = new Date(endDate);
-  startDate.setYear(startDate.getYear() - 1);
-
-  //endDate.setHours(endDate.getHours() + 96);
-
-  var matches = database.getResults(startDate,  endDate);
+  var matches = database.getResults();
   
   matches.sort(function(a, b) {
     return b.time - a.time;

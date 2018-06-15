@@ -4,15 +4,15 @@ var database = require('../database');
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
-  var points = database.getRankings();
+  var points = database.getPoints();
   
   points.sort(function(a, b) {
-    return b.points - a.points;
+    return b.time - a.time;
   });
 
-  res.render('ranking', { 
-    title: 'Ranking', 
-    points: points 
+  res.render('points', { 
+    title: 'Pontuações',
+    points: points
   });
 });
 

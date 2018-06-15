@@ -9,6 +9,7 @@ var routes = require('./routes/index');
 var guesses = require('./routes/guesses');
 var results = require('./routes/results');
 var ranking = require('./routes/ranking');
+var points = require('./routes/points');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use('/', routes);
 app.use('/guesses', guesses);
 app.use('/results', results);
 app.use('/ranking', ranking);
+app.use('/points', points);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
