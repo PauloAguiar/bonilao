@@ -1,13 +1,24 @@
-<div class="match-header-box container-fluid d-flex justify-content-between align-items-center align-self-center border-bottom p-1">
-        <div class="match-header-flag border border-dark">
-                <img src="<%= match.team1.flag %>" class="img-fluid">
+<div class="d-flex flex-column border-bottom">
+        <div class="match-header-box container-fluid d-flex justify-content-between align-items-center align-self-center  p-1">
+                <div class="match-header-flag border border-dark">
+                        <img src="<%= match.team1.flag %>" class="img-fluid">
+                </div>
+                <div class="match-header-name pl-3 text-center"><%= match.team1.name %></div>
+                <div class="match-header-score"><%= match.score1 %></div>
+                <div class="pl-1 pr-1">x</div>
+                <div class="match-header-score"><%= match.score2 %></div>
+                <div class="match-header-name pr-3 text-center"><%= match.team2.name %></div>
+                <div class="match-header-flag border border-dark">
+                        <img src="<%= match.team2.flag %>" class="img-fluid">
+                </div>
         </div>
-        <div class="match-header-name pl-3 text-center"><%= match.team1.name %></div>
-        <div class="match-header-score"><%= match.score1 %></div>
-        <div class="pl-1 pr-1">x</div>
-        <div class="match-header-score"><%= match.score2 %></div>
-        <div class="match-header-name pr-3 text-center"><%= match.team2.name %></div>
-        <div class="match-header-flag border border-dark">
-                <img src="<%= match.team2.flag %>" class="img-fluid">
+
+        <% if (match.status === "in progress") { %>
+        <div class="text-center">
+                <small>
+                        (Ao vivo!)
+                </small>
         </div>
+        <% } %>
+        
 </div>

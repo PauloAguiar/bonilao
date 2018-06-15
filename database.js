@@ -60,7 +60,7 @@ function getGuesses (game) {
 
 function getCompletedMatchTable() {
         return matchTable.filter(match => {
-                return match.status === "completed";
+                return match.status === "completed" || match.status === "in progress";
         });
 };
 
@@ -89,7 +89,8 @@ exports.getResults = function () {
                         'team2': countries[match.away_team.code],
                         'time': date,
                         'score1': match.home_team.goals,
-                        'score2': match.away_team.goals
+                        'score2': match.away_team.goals,
+                        'status': match.status
                 };
 
                 result.push(object);
@@ -147,6 +148,7 @@ exports.getPoints = function () {
                         'time': date,
                         'score1': match.home_team.goals,
                         'score2': match.away_team.goals,
+                        'status': match.status,
                         'points': points
                 };
 
