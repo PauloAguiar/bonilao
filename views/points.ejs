@@ -22,15 +22,7 @@
                   </div>
                   <div class="col-8">
                     <div class="row mb-2">
-                        <div class="col-5 text-truncate text-center">
-                            <span><%= matchEntry.team1.name %></span>
-                        </div>
-                        <div class="col-2 text-nowrap">
-                            <div><%= matchEntry.score1 %> x <%= matchEntry.score2 %></div>
-                        </div>
-                        <div class="col-5 text-truncate text-center">
-                            <span><%= matchEntry.team2.name %></span>
-                        </div>
+                        <div class="col-12 text-center"><%= matchEntry.team1.name %> <strong><%= matchEntry.score1 %></strong> x <strong><%= matchEntry.score2 %></strong> <%= matchEntry.team2.name %></div>
                     </div>
                     <% if (matchEntry.points.length > 0) { %>
                     <% matchEntry.points.forEach(function(guessEntry, index) { %>
