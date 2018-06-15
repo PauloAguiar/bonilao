@@ -1,0 +1,1554 @@
+[
+        {
+                "venue": "Moscow",
+                "location": "Luzhniki Stadium",
+                "datetime": "2018-06-14T09:00:00.000-05:00",
+                "status": "completed",
+                "time": "full-time",
+                "fifa_id": "300331503",
+                "home_team": {
+                        "country": "Russia",
+                        "code": "RUS",
+                        "goals": 5
+                },
+                "away_team": {
+                        "country": "Saudi Arabia",
+                        "code": "KSA",
+                        "goals": 0
+                },
+                "winner": "Russia",
+                "winner_code": "RUS",
+                "home_team_events": [
+                        {
+                                "id": 5,
+                                "type_of_event": "goal",
+                                "player": "Iury GAZINSKY",
+                                "time": "12'"
+                        },
+                        {
+                                "id": 1,
+                                "type_of_event": "substitution-in",
+                                "player": "Denis CHERYSHEV",
+                                "time": "24'"
+                        },
+                        {
+                                "id": 2,
+                                "type_of_event": "goal",
+                                "player": "Denis CHERYSHEV",
+                                "time": "43'"
+                        },
+                        {
+                                "id": 4,
+                                "type_of_event": "substitution-in",
+                                "player": "Daler KUZIAEV",
+                                "time": "64'"
+                        },
+                        {
+                                "id": 8,
+                                "type_of_event": "substitution-in",
+                                "player": "Artem DZYUBA",
+                                "time": "70'"
+                        },
+                        {
+                                "id": 9,
+                                "type_of_event": "goal",
+                                "player": "Artem DZYUBA",
+                                "time": "71'"
+                        },
+                        {
+                                "id": 6,
+                                "type_of_event": "yellow-card",
+                                "player": "Aleksandr GOLOVIN",
+                                "time": "88'"
+                        },
+                        {
+                                "id": 3,
+                                "type_of_event": "goal",
+                                "player": "Denis CHERYSHEV",
+                                "time": "90'+1'"
+                        },
+                        {
+                                "id": 7,
+                                "type_of_event": "goal",
+                                "player": "Aleksandr GOLOVIN",
+                                "time": "90'+4'"
+                        }
+                ],
+                "away_team_events": [
+                        {
+                                "id": 12,
+                                "type_of_event": "substitution-in",
+                                "player": "FAHAD ALMUWALLAD",
+                                "time": "64'"
+                        },
+                        {
+                                "id": 10,
+                                "type_of_event": "substitution-in",
+                                "player": "HATAN BAHBIR",
+                                "time": "72'"
+                        },
+                        {
+                                "id": 13,
+                                "type_of_event": "substitution-in",
+                                "player": "MUHANNAD ASIRI",
+                                "time": "85'"
+                        },
+                        {
+                                "id": 11,
+                                "type_of_event": "yellow-card",
+                                "player": "TAISEER ALJASSAM",
+                                "time": "90'+3'"
+                        }
+                ]
+        },
+        {
+                "venue": "Ekaterinburg",
+                "location": "Ekaterinburg Arena",
+                "datetime": "2018-06-15T06:00:00.000-05:00",
+                "status": "completed",
+                "time": "full-time",
+                "fifa_id": "300353632",
+                "home_team": {
+                        "country": "Egypt",
+                        "code": "EGY",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Uruguay",
+                        "code": "URU",
+                        "goals": 1
+                },
+                "winner": "Uruguay",
+                "winner_code": "URU",
+                "home_team_events": [
+                        {
+                                "id": 14,
+                                "type_of_event": "substitution-in",
+                                "player": "SAM MORSY",
+                                "time": "50'"
+                        },
+                        {
+                                "id": 17,
+                                "type_of_event": "substitution-in",
+                                "player": "KAHRABA",
+                                "time": "63'"
+                        },
+                        {
+                                "id": 18,
+                                "type_of_event": "substitution-in",
+                                "player": "RAMADAN SOBHY",
+                                "time": "82'"
+                        },
+                        {
+                                "id": 21,
+                                "type_of_event": "yellow-card",
+                                "player": "AHMED HEGAZY",
+                                "time": "90'+6'"
+                        }
+                ],
+                "away_team_events": [
+                        {
+                                "id": 15,
+                                "type_of_event": "substitution-in",
+                                "player": "Carlos SANCHEZ",
+                                "time": "58'"
+                        },
+                        {
+                                "id": 16,
+                                "type_of_event": "substitution-in",
+                                "player": "Cristian RODRIGUEZ",
+                                "time": "59'"
+                        },
+                        {
+                                "id": 19,
+                                "type_of_event": "substitution-in",
+                                "player": "Lucas TORREIRA",
+                                "time": "87'"
+                        },
+                        {
+                                "id": 20,
+                                "type_of_event": "goal",
+                                "player": "Jose GIMENEZ",
+                                "time": "89'"
+                        }
+                ]
+        },
+        {
+                "venue": "St. Petersburg",
+                "location": "Saint Petersburg Stadium",
+                "datetime": "2018-06-15T09:00:00.000-05:00",
+                "status": "in progress",
+                "time": "half-time",
+                "fifa_id": "300331526",
+                "home_team": {
+                        "country": "Morocco",
+                        "code": "MAR",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Iran",
+                        "code": "IRN",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [
+                        {
+                                "id": 23,
+                                "type_of_event": "yellow-card",
+                                "player": "Karim EL AHMADI",
+                                "time": "34'"
+                        }
+                ],
+                "away_team_events": [
+                        {
+                                "id": 22,
+                                "type_of_event": "yellow-card",
+                                "player": "Masoud SHOJAEI",
+                                "time": "10'"
+                        }
+                ]
+        },
+        {
+                "venue": "Sochi",
+                "location": "Fisht Stadium",
+                "datetime": "2018-06-15T12:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331524",
+                "home_team": {
+                        "country": "Portugal",
+                        "code": "POR",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Spain",
+                        "code": "ESP",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Kazan",
+                "location": "Kazan Arena",
+                "datetime": "2018-06-16T04:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331533",
+                "home_team": {
+                        "country": "France",
+                        "code": "FRA",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Australia",
+                        "code": "AUS",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Moscow",
+                "location": "Spartak Stadium",
+                "datetime": "2018-06-16T07:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331515",
+                "home_team": {
+                        "country": "Argentina",
+                        "code": "ARG",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Iceland",
+                        "code": "ISL",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Saransk",
+                "location": "Mordovia Arena",
+                "datetime": "2018-06-16T10:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331528",
+                "home_team": {
+                        "country": "Peru",
+                        "code": "PER",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Denmark",
+                        "code": "DEN",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Kaliningrad",
+                "location": "Kaliningrad Stadium",
+                "datetime": "2018-06-16T13:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331523",
+                "home_team": {
+                        "country": "Croatia",
+                        "code": "CRO",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Nigeria",
+                        "code": "NGA",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Samara",
+                "location": "Samara Arena",
+                "datetime": "2018-06-17T06:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331529",
+                "home_team": {
+                        "country": "Costa Rica",
+                        "code": "CRC",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Serbia",
+                        "code": "SRB",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Moscow",
+                "location": "Luzhniki Stadium",
+                "datetime": "2018-06-17T09:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331502",
+                "home_team": {
+                        "country": "Germany",
+                        "code": "GER",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Mexico",
+                        "code": "MEX",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Rostov-On-Don",
+                "location": "Rostov Arena",
+                "datetime": "2018-06-17T12:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331525",
+                "home_team": {
+                        "country": "Brazil",
+                        "code": "BRA",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Switzerland",
+                        "code": "SUI",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Nizhny Novgorod",
+                "location": "Nizhny Novgorod Stadium",
+                "datetime": "2018-06-18T06:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331499",
+                "home_team": {
+                        "country": "Sweden",
+                        "code": "SWE",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Korea Republic",
+                        "code": "KOR",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Sochi",
+                "location": "Fisht Stadium",
+                "datetime": "2018-06-18T09:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331539",
+                "home_team": {
+                        "country": "Belgium",
+                        "code": "BEL",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Panama",
+                        "code": "PAN",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Volgograd",
+                "location": "Volgograd Arena",
+                "datetime": "2018-06-18T12:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331554",
+                "home_team": {
+                        "country": "Tunisia",
+                        "code": "TUN",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "England",
+                        "code": "ENG",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Saransk",
+                "location": "Mordovia Arena",
+                "datetime": "2018-06-19T06:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331550",
+                "home_team": {
+                        "country": "Colombia",
+                        "code": "COL",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Japan",
+                        "code": "JPN",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Moscow",
+                "location": "Spartak Stadium",
+                "datetime": "2018-06-19T09:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331545",
+                "home_team": {
+                        "country": "Poland",
+                        "code": "POL",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Senegal",
+                        "code": "SEN",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "St. Petersburg",
+                "location": "Saint Petersburg Stadium",
+                "datetime": "2018-06-19T12:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331495",
+                "home_team": {
+                        "country": "Russia",
+                        "code": "RUS",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Egypt",
+                        "code": "EGY",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Moscow",
+                "location": "Luzhniki Stadium",
+                "datetime": "2018-06-20T06:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331511",
+                "home_team": {
+                        "country": "Portugal",
+                        "code": "POR",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Morocco",
+                        "code": "MAR",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Rostov-On-Don",
+                "location": "Rostov Arena",
+                "datetime": "2018-06-20T09:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331530",
+                "home_team": {
+                        "country": "Uruguay",
+                        "code": "URU",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Saudi Arabia",
+                        "code": "KSA",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Kazan",
+                "location": "Kazan Arena",
+                "datetime": "2018-06-20T12:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331496",
+                "home_team": {
+                        "country": "Iran",
+                        "code": "IRN",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Spain",
+                        "code": "ESP",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Samara",
+                "location": "Samara Arena",
+                "datetime": "2018-06-21T06:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331518",
+                "home_team": {
+                        "country": "Denmark",
+                        "code": "DEN",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Australia",
+                        "code": "AUS",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Ekaterinburg",
+                "location": "Ekaterinburg Arena",
+                "datetime": "2018-06-21T09:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331527",
+                "home_team": {
+                        "country": "France",
+                        "code": "FRA",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Peru",
+                        "code": "PER",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Nizhny Novgorod",
+                "location": "Nizhny Novgorod Stadium",
+                "datetime": "2018-06-21T12:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331513",
+                "home_team": {
+                        "country": "Argentina",
+                        "code": "ARG",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Croatia",
+                        "code": "CRO",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "St. Petersburg",
+                "location": "Saint Petersburg Stadium",
+                "datetime": "2018-06-22T06:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331540",
+                "home_team": {
+                        "country": "Brazil",
+                        "code": "BRA",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Costa Rica",
+                        "code": "CRC",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Volgograd",
+                "location": "Volgograd Arena",
+                "datetime": "2018-06-22T09:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331497",
+                "home_team": {
+                        "country": "Nigeria",
+                        "code": "NGA",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Iceland",
+                        "code": "ISL",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Kaliningrad",
+                "location": "Kaliningrad Stadium",
+                "datetime": "2018-06-22T12:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300340183",
+                "home_team": {
+                        "country": "Serbia",
+                        "code": "SRB",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Switzerland",
+                        "code": "SUI",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Moscow",
+                "location": "Spartak Stadium",
+                "datetime": "2018-06-23T06:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331547",
+                "home_team": {
+                        "country": "Belgium",
+                        "code": "BEL",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Tunisia",
+                        "code": "TUN",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Rostov-On-Don",
+                "location": "Rostov Arena",
+                "datetime": "2018-06-23T09:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331549",
+                "home_team": {
+                        "country": "Korea Republic",
+                        "code": "KOR",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Mexico",
+                        "code": "MEX",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Sochi",
+                "location": "Fisht Stadium",
+                "datetime": "2018-06-23T12:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331501",
+                "home_team": {
+                        "country": "Germany",
+                        "code": "GER",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Sweden",
+                        "code": "SWE",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Nizhny Novgorod",
+                "location": "Nizhny Novgorod Stadium",
+                "datetime": "2018-06-24T06:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331546",
+                "home_team": {
+                        "country": "England",
+                        "code": "ENG",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Panama",
+                        "code": "PAN",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Ekaterinburg",
+                "location": "Ekaterinburg Arena",
+                "datetime": "2018-06-24T09:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331505",
+                "home_team": {
+                        "country": "Japan",
+                        "code": "JPN",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Senegal",
+                        "code": "SEN",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Kazan",
+                "location": "Kazan Arena",
+                "datetime": "2018-06-24T12:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331508",
+                "home_team": {
+                        "country": "Poland",
+                        "code": "POL",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Colombia",
+                        "code": "COL",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Volgograd",
+                "location": "Volgograd Arena",
+                "datetime": "2018-06-25T08:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331509",
+                "home_team": {
+                        "country": "Saudi Arabia",
+                        "code": "KSA",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Egypt",
+                        "code": "EGY",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Samara",
+                "location": "Samara Arena",
+                "datetime": "2018-06-25T08:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331516",
+                "home_team": {
+                        "country": "Uruguay",
+                        "code": "URU",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Russia",
+                        "code": "RUS",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Saransk",
+                "location": "Mordovia Arena",
+                "datetime": "2018-06-25T12:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331500",
+                "home_team": {
+                        "country": "Iran",
+                        "code": "IRN",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Portugal",
+                        "code": "POR",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Kaliningrad",
+                "location": "Kaliningrad Stadium",
+                "datetime": "2018-06-25T12:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300340184",
+                "home_team": {
+                        "country": "Spain",
+                        "code": "ESP",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Morocco",
+                        "code": "MAR",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Moscow",
+                "location": "Luzhniki Stadium",
+                "datetime": "2018-06-26T08:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331512",
+                "home_team": {
+                        "country": "Denmark",
+                        "code": "DEN",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "France",
+                        "code": "FRA",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Sochi",
+                "location": "Fisht Stadium",
+                "datetime": "2018-06-26T08:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331506",
+                "home_team": {
+                        "country": "Australia",
+                        "code": "AUS",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Peru",
+                        "code": "PER",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Rostov-On-Don",
+                "location": "Rostov Arena",
+                "datetime": "2018-06-26T12:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331510",
+                "home_team": {
+                        "country": "Iceland",
+                        "code": "ISL",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Croatia",
+                        "code": "CRO",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "St. Petersburg",
+                "location": "Saint Petersburg Stadium",
+                "datetime": "2018-06-26T12:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331519",
+                "home_team": {
+                        "country": "Nigeria",
+                        "code": "NGA",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Argentina",
+                        "code": "ARG",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Ekaterinburg",
+                "location": "Ekaterinburg Arena",
+                "datetime": "2018-06-27T08:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331548",
+                "home_team": {
+                        "country": "Mexico",
+                        "code": "MEX",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Sweden",
+                        "code": "SWE",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Kazan",
+                "location": "Kazan Arena",
+                "datetime": "2018-06-27T08:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331532",
+                "home_team": {
+                        "country": "Korea Republic",
+                        "code": "KOR",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Germany",
+                        "code": "GER",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Moscow",
+                "location": "Spartak Stadium",
+                "datetime": "2018-06-27T12:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331521",
+                "home_team": {
+                        "country": "Serbia",
+                        "code": "SRB",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Brazil",
+                        "code": "BRA",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Nizhny Novgorod",
+                "location": "Nizhny Novgorod Stadium",
+                "datetime": "2018-06-27T12:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331534",
+                "home_team": {
+                        "country": "Switzerland",
+                        "code": "SUI",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Costa Rica",
+                        "code": "CRC",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Samara",
+                "location": "Samara Arena",
+                "datetime": "2018-06-28T08:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331553",
+                "home_team": {
+                        "country": "Senegal",
+                        "code": "SEN",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Colombia",
+                        "code": "COL",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Volgograd",
+                "location": "Volgograd Arena",
+                "datetime": "2018-06-28T08:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331507",
+                "home_team": {
+                        "country": "Japan",
+                        "code": "JPN",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Poland",
+                        "code": "POL",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Saransk",
+                "location": "Mordovia Arena",
+                "datetime": "2018-06-28T12:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331520",
+                "home_team": {
+                        "country": "Panama",
+                        "code": "PAN",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Tunisia",
+                        "code": "TUN",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Kaliningrad",
+                "location": "Kaliningrad Stadium",
+                "datetime": "2018-06-28T12:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300340182",
+                "home_team": {
+                        "country": "England",
+                        "code": "ENG",
+                        "goals": 0
+                },
+                "away_team": {
+                        "country": "Belgium",
+                        "code": "BEL",
+                        "goals": 0
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": [],
+                "away_team_events": []
+        },
+        {
+                "venue": "Kazan",
+                "location": "Kazan Arena",
+                "datetime": "2018-06-30T16:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331537",
+                "home_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "1C"
+                },
+                "away_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "2D"
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": "no events available for this match",
+                "away_team_events": "no events available for this match"
+        },
+        {
+                "venue": "Sochi",
+                "location": "Fisht Stadium",
+                "datetime": "2018-06-30T20:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331544",
+                "home_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "1A"
+                },
+                "away_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "2B"
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": "no events available for this match",
+                "away_team_events": "no events available for this match"
+        },
+        {
+                "venue": "Moscow",
+                "location": "Luzhniki Stadium",
+                "datetime": "2018-07-01T16:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331517",
+                "home_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "1B"
+                },
+                "away_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "2A"
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": "no events available for this match",
+                "away_team_events": "no events available for this match"
+        },
+        {
+                "venue": "Nizhny Novgorod",
+                "location": "Nizhny Novgorod Stadium",
+                "datetime": "2018-07-01T20:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331498",
+                "home_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "1D"
+                },
+                "away_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "2C"
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": "no events available for this match",
+                "away_team_events": "no events available for this match"
+        },
+        {
+                "venue": "Samara",
+                "location": "Samara Arena",
+                "datetime": "2018-07-02T17:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331535",
+                "home_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "1E"
+                },
+                "away_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "2F"
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": "no events available for this match",
+                "away_team_events": "no events available for this match"
+        },
+        {
+                "venue": "Rostov-On-Don",
+                "location": "Rostov Arena",
+                "datetime": "2018-07-02T20:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331551",
+                "home_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "1G"
+                },
+                "away_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "2H"
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": "no events available for this match",
+                "away_team_events": "no events available for this match"
+        },
+        {
+                "venue": "St. Petersburg",
+                "location": "Saint Petersburg Stadium",
+                "datetime": "2018-07-03T16:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331514",
+                "home_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "1F"
+                },
+                "away_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "2E"
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": "no events available for this match",
+                "away_team_events": "no events available for this match"
+        },
+        {
+                "venue": "Moscow",
+                "location": "Spartak Stadium",
+                "datetime": "2018-07-03T20:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331542",
+                "home_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "1H"
+                },
+                "away_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "2G"
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": "no events available for this match",
+                "away_team_events": "no events available for this match"
+        },
+        {
+                "venue": "Nizhny Novgorod",
+                "location": "Nizhny Novgorod Stadium",
+                "datetime": "2018-07-06T16:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331543",
+                "home_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "W49"
+                },
+                "away_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "W50"
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": "no events available for this match",
+                "away_team_events": "no events available for this match"
+        },
+        {
+                "venue": "Kazan",
+                "location": "Kazan Arena",
+                "datetime": "2018-07-06T20:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331538",
+                "home_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "W53"
+                },
+                "away_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "W54"
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": "no events available for this match",
+                "away_team_events": "no events available for this match"
+        },
+        {
+                "venue": "Samara",
+                "location": "Samara Arena",
+                "datetime": "2018-07-07T17:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331541",
+                "home_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "W55"
+                },
+                "away_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "W56"
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": "no events available for this match",
+                "away_team_events": "no events available for this match"
+        },
+        {
+                "venue": "Sochi",
+                "location": "Fisht Stadium",
+                "datetime": "2018-07-07T20:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331504",
+                "home_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "W51"
+                },
+                "away_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "W52"
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": "no events available for this match",
+                "away_team_events": "no events available for this match"
+        },
+        {
+                "venue": "St. Petersburg",
+                "location": "Saint Petersburg Stadium",
+                "datetime": "2018-07-10T20:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331531",
+                "home_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "W57"
+                },
+                "away_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "W58"
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": "no events available for this match",
+                "away_team_events": "no events available for this match"
+        },
+        {
+                "venue": "Moscow",
+                "location": "Luzhniki Stadium",
+                "datetime": "2018-07-11T20:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331522",
+                "home_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "W59"
+                },
+                "away_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "W60"
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": "no events available for this match",
+                "away_team_events": "no events available for this match"
+        },
+        {
+                "venue": "St. Petersburg",
+                "location": "Saint Petersburg Stadium",
+                "datetime": "2018-07-14T16:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331536",
+                "home_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "L61"
+                },
+                "away_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "L62"
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": "no events available for this match",
+                "away_team_events": "no events available for this match"
+        },
+        {
+                "venue": "Moscow",
+                "location": "Luzhniki Stadium",
+                "datetime": "2018-07-15T17:00:00.000-05:00",
+                "status": "future",
+                "time": null,
+                "fifa_id": "300331552",
+                "home_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "W61"
+                },
+                "away_team": {
+                        "country": "To Be Determined",
+                        "code": "TBD",
+                        "team_tbd": "W62"
+                },
+                "winner": null,
+                "winner_code": null,
+                "home_team_events": "no events available for this match",
+                "away_team_events": "no events available for this match"
+        }
+]

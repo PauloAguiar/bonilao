@@ -1,15 +1,18 @@
 var request = require("request");
 var fs = require("fs");
 
-var matchesFile = fs.readFileSync("./world-cup.json/2018/worldcup.json");
+var matchesFile = fs.readFileSync("./data/matches.json");
 var countriesFile = fs.readFileSync("./mapping/countries.json");
 var peopleFile = fs.readFileSync("./mapping/people.json");
 
-var url = "https://raw.githubusercontent.com/openfootball/world-cup.json/master/2018/worldcup.json";
+var fifaIdToNumFile = fs.readFileSync("./mapping/fifa_id-to-num.json");
 
-var matches = JSON.parse(matchesFile);
+var url = "http://worldcup.sfg.io/matches";
+
+var matchTable = JSON.parse(matchesFile);
 var countries = JSON.parse(countriesFile);
 var people = JSON.parse(peopleFile);
+var fifaIdToNumTable = JSON.parse(fifaIdToNumFile);
 
 var lastRequest = new Date(0);
 
@@ -17,16 +20,16 @@ function updateResults() {
         var currentTime = new Date(Date.now());
 
         var diff = currentTime.getTime() - lastRequest.getTime();
-        var diffMinutes =  Math.round(diff / 60000)
+        var diffSeconds =  Math.round(diff / 1000)
 
-        if (diffMinutes > 5)
+        if (diffSeconds > 60)
         {
-                console.log("Updating results after " + diffMinutes + " minutes");
+                console.log("Updating results after " + diffSeconds + " segundos");
                 return request({ url: url, json: true
                 }, function (error, response, body) {
                     if (!error && response.statusCode === 200) {
                         lastRequest = currentTime;
-                        matches = body;
+                        matchTable = body;
                     }
                 });
         }
@@ -55,27 +58,41 @@ function getGuesses (game) {
         return guesses;
 };
 
+function getCompletedMatchTable() {
+        return matchTable.filter(match => {
+                return match.status === "completed";
+        });
+};
+
+function getUpcomingMatches() {
+        return matchTable.filter(match => {
+                var date = new Date(Date.parse(match.datetime));
+                var endDate = new Date(Date.now());
+                endDate.setDate(endDate.getDate() + 1);
+
+                return date < endDate && match.status !== "completed";
+        });
+};
+
 exports.getResults = function () {
         var result = [];
         
         updateResults();
 
-        matches.rounds.forEach(round => {
-                round.matches.forEach(match => {
-                        if (match.score1 !== null && match.score2 !== null)
-                        {
-                                var date = new Date(Date.parse(match.date + " " + match.time));
-                                var object = {
-                                        'team1': countries[match.team1.code],
-                                        'team2': countries[match.team2.code],
-                                        'time': date,
-                                        'score1': match.score1,
-                                        'score2': match.score2
-                                };
+        var matches = getCompletedMatchTable();
 
-                                result.push(object);
-                        }
-                });
+        matches.forEach(match => {
+                var date = new Date(Date.parse(match.datetime));
+
+                var object = {
+                        'team1': countries[match.home_team.code],
+                        'team2': countries[match.away_team.code],
+                        'time': date,
+                        'score1': match.home_team.goals,
+                        'score2': match.away_team.goals
+                };
+
+                result.push(object);
         });
 
         return result;
@@ -85,61 +102,56 @@ exports.getPoints = function () {
         var result = [];
 
         updateResults();
+        var matches = getCompletedMatchTable();
 
-        matches.rounds.forEach(round => {
-                round.matches.forEach(match => {
-                        if (match.score1 !== null && match.score2 !== null)
-                        {
-                                var points = [];
-                                var guesses = getGuesses(match.num);
+        matches.forEach(match => {
+                var points = [];
+                var gameId = fifaIdToNumTable[match.fifa_id];
+                var guesses = getGuesses(gameId);
 
-                                guesses.forEach(function(entry, index) {
-                                        var guessResult =  {
-                                                name: people[entry.id].name,
-                                                photo: people[entry.id].photo,
-                                                guess: people[entry.id].guesses[match.num],
-                                                points: 0
-                                        }
-        
-                                        if (match.score1 !== null && match.score2 !== null)
-                                        {
-                                                if (match.score1 === entry.guess.score1 && match.score2 === entry.guess.score2)
-                                                {
-                                                        guessResult.points = 6;
-                                                }
-                                                else if ((match.score1 - match.score2 > 0
-                                                          && entry.guess.score1 - entry.guess.score2 > 0)
-                                                        || (match.score1 - match.score2 < 0
-                                                            && entry.guess.score1 - entry.guess.score2 < 0)
-                                                        || (match.score1 === match.score2
-                                                                && entry.guess.score1 === entry.guess.score2))
-                                                {
-                                                        guessResult.points = 3;
-                                                }
-                                        }
-
-                                        points.push(guessResult);
-                                });
-
-                                points.sort(function(a, b) {
-                                        return b.points - a.points;
-                                });
-
-                                var date = new Date(Date.parse(match.date + " " + match.time + " " + match.timezone));
-
-                                var object = {
-                                        'id': match.num,
-                                        'team1': countries[match.team1.code],
-                                        'team2': countries[match.team2.code],
-                                        'time': date,
-                                        'score1': match.score1,
-                                        'score2': match.score2,
-                                        'points': points
-                                };
-
-                                result.push(object);
+                guesses.forEach(function(user, index) {
+                        var guessResult =  {
+                                name: people[user.id].name,
+                                photo: people[user.id].photo,
+                                guess: people[user.id].guesses[gameId],
+                                points: 0
                         }
+
+                        if (match.home_team.goals === user.guess.score1 && match.away_team.goals === user.guess.score2)
+                        {
+                                guessResult.points = 6;
+                        }
+                        else if ((match.home_team.goals - match.away_team.goals > 0
+                                        && user.guess.score1 - user.guess.score2 > 0)
+                                || (match.home_team.goals - match.away_team.goals < 0
+                                        && user.guess.score1 - user.guess.score2 < 0)
+                                || (match.home_team.goals === match.away_team.goals
+                                        && user.guess.score1 === user.guess.score2))
+                        {
+                                guessResult.points = 3;
+                        }
+
+                        points.push(guessResult);
                 });
+
+                points.sort(function(a, b) {
+                        return b.points - a.points;
+                });
+
+                var date = new Date(Date.parse(match.datetime));
+
+                var object = {
+                        'id': match.fifa_id,
+                        'team1': countries[match.home_team.code],
+                        'team2': countries[match.away_team.code],
+                        'time': date,
+                        'score1': match.home_team.goals,
+                        'score2': match.away_team.goals,
+                        'points': points
+                };
+
+                result.push(object);
+
         });
 
         return result;
@@ -149,25 +161,20 @@ exports.getMatches = function (startDate, endDate) {
         var result = [];
         
         updateResults()
+        var matches = getUpcomingMatches();
 
-        matches.rounds.forEach(round => {
-                round.matches.forEach(match => {
-                        var date = new Date(Date.parse(match.date + " " + match.time + " " + match.timezone));
-                        if (date >= startDate && date < endDate) 
-                        {
-                                var object = {
-                                        'id': match.num,
-                                        'team1': countries[match.team1.code],
-                                        'team2': countries[match.team2.code],
-                                        'time': date,
-                                        'score1': match.score1,
-                                        'score2': match.score2,
-                                        'guesses': getGuesses(match.num),
-                                };
+        matches.forEach(match => {
+                var object = {
+                        'id': match.fifa_id,
+                        'team1': countries[match.home_team.code],
+                        'team2': countries[match.away_team.code],
+                        'time': new Date(Date.parse(match.datetime)),
+                        'score1': match.home_team.goals,
+                        'score2': match.away_team.goals,
+                        'guesses': getGuesses(fifaIdToNumTable[match.fifa_id]),
+                };
 
-                                result.push(object);
-                        }
-                });
+                result.push(object);
         });
 
         return result;
@@ -178,37 +185,34 @@ exports.getRankings = function() {
 
         updateResults()
 
-        matches.rounds.forEach(round => {
-                round.matches.forEach(match => {
-                        var guesses = getGuesses(match.num);
+        var matches = getCompletedMatchTable();
 
-                        guesses.forEach(function(entry, index) {
-                                if (points[entry.id] === undefined)
-                                {
-                                        points[entry.id] = {
-                                                name: people[entry.id].name,
-                                                photo: people[entry.id].photo,
-                                                points: 0
-                                        }
-                                }
+        matches.forEach(match => {
+                var guesses = getGuesses(fifaIdToNumTable[match.fifa_id]);
 
-                                if (match.score1 !== null && match.score2 !== null)
-                                {
-                                        if (match.score1 === entry.guess.score1 && match.score2 === entry.guess.score2)
-                                        {
-                                                points[entry.id].points += 6;
-                                        }
-                                        else if ((match.score1 - match.score2 > 0
-                                                  && entry.guess.score1 - entry.guess.score2 > 0)
-                                                || (match.score1 - match.score2 < 0
-                                                    && entry.guess.score1 - entry.guess.score2 < 0)
-                                                || (match.score1 === match.score2
-                                                        && entry.guess.score1 === entry.guess.score2))
-                                        {
-                                                points[entry.id].points += 3;
-                                        }
+                guesses.forEach(function(entry, index) {
+                        if (points[entry.id] === undefined)
+                        {
+                                points[entry.id] = {
+                                        name: people[entry.id].name,
+                                        photo: people[entry.id].photo,
+                                        points: 0
                                 }
-                        });
+                        }
+
+                        if (match.home_team.goals === entry.guess.score1 && match.away_team.goals === entry.guess.score2)
+                        {
+                                points[entry.id].points += 6;
+                        }
+                        else if ((match.home_team.goals - match.away_team.goals > 0
+                                        && entry.guess.score1 - entry.guess.score2 > 0)
+                                || (match.home_team.goals - match.away_team.goals < 0
+                                        && entry.guess.score1 - entry.guess.score2 < 0)
+                                || (match.home_team.goals === match.away_team.goals
+                                        && entry.guess.score1 === entry.guess.score2))
+                        {
+                                points[entry.id].points += 3;
+                        }
                 });
         });
 
