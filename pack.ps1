@@ -1,0 +1,1 @@
+Compress-Archive -Update -Path ./* -DestinationPath testService.zip
