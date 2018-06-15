@@ -1,12 +1,36 @@
+var request = require("request");
 var fs = require("fs");
 
 var matchesFile = fs.readFileSync("./world-cup.json/2018/worldcup.json");
 var countriesFile = fs.readFileSync("./mapping/countries.json");
 var peopleFile = fs.readFileSync("./mapping/people.json");
 
+var url = "https://raw.githubusercontent.com/openfootball/world-cup.json/master/2018/worldcup.json";
+
 var matches = JSON.parse(matchesFile);
 var countries = JSON.parse(countriesFile);
 var people = JSON.parse(peopleFile);
+
+var lastRequest = new Date(0);
+
+function updateResults() {
+        var currentTime = new Date(Date.now());
+
+        var diff = currentTime.getTime() - lastRequest.getTime();
+        var diffMinutes =  Math.round(diff / 60000)
+
+        if (diffMinutes > 5)
+        {
+                console.log("Updating results after " + diffMinutes + " minutes");
+                return request({ url: url, json: true
+                }, function (error, response, body) {
+                    if (!error && response.statusCode === 200) {
+                        lastRequest = currentTime;
+                        matches = body;
+                    }
+                });
+        }
+};
 
 function getGuesses (game) {
         var guesses = []
@@ -33,6 +57,9 @@ function getGuesses (game) {
 
 exports.getResults = function () {
         var result = [];
+        
+        updateResults();
+
         matches.rounds.forEach(round => {
                 round.matches.forEach(match => {
                         if (match.score1 !== null && match.score2 !== null)
@@ -57,6 +84,8 @@ exports.getResults = function () {
 exports.getPoints = function () {
         var result = [];
 
+        updateResults();
+
         matches.rounds.forEach(round => {
                 round.matches.forEach(match => {
                         if (match.score1 !== null && match.score2 !== null)
@@ -76,7 +105,6 @@ exports.getPoints = function () {
                                         {
                                                 if (match.score1 === entry.guess.score1 && match.score2 === entry.guess.score2)
                                                 {
-                                                        console.log(3);
                                                         guessResult.points = 6;
                                                 }
                                                 else if ((match.score1 - match.score2 > 0
@@ -86,7 +114,6 @@ exports.getPoints = function () {
                                                         || (match.score1 === match.score2
                                                                 && entry.guess.score1 === entry.guess.score2))
                                                 {
-                                                        console.log(1);
                                                         guessResult.points = 3;
                                                 }
                                         }
@@ -120,6 +147,9 @@ exports.getPoints = function () {
 
 exports.getMatches = function (startDate, endDate) {
         var result = [];
+        
+        updateResults()
+
         matches.rounds.forEach(round => {
                 round.matches.forEach(match => {
                         var date = new Date(Date.parse(match.date + " " + match.time + " " + match.timezone));
@@ -145,6 +175,8 @@ exports.getMatches = function (startDate, endDate) {
 
 exports.getRankings = function() {
         var points = {};
+
+        updateResults()
 
         matches.rounds.forEach(round => {
                 round.matches.forEach(match => {
