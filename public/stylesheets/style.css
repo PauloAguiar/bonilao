@@ -2,23 +2,44 @@ body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
+.page-box {
+  max-width: 600px;
+}
+
 .title-icon {
   padding: .2em;
+  font-size: 2em;
 }
 
-.guess-name {
-  vertical-align: middle;
-  font-size: .8em;
-}
-
-.guess-score {
-  font-weight: bold;
-  vertical-align: middle;
-  font-size: 1.2em;
+.user-photo-thumbnail
+{
+  object-fit: cover;
+  width: 40px;
+  height: 40px;
 }
 
 .ranking-points {
   font-weight: bold;
   vertical-align: middle;
   font-size: 1.4em;
+}
+
+.match-header-box {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.match-header-name {
+  font-weight: bold;
+  width: 170px;
+}
+
+.match-header-score {
+  font-weight: bold;
+  font-size: 1.4em
+}
+
+.user-guess-box {
+  max-width: 300px;
+  margin: 0 auto;
 }

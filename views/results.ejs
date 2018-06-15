@@ -2,53 +2,35 @@
 <html>
   <% include ./partials/head %>
   <body>
-    <body>
-      <% include ./partials/header %>
-  
-      <div class="container">
-          <div class="row">
-            <h4 class="d-flex align-items-center">
-              <i class="title-icon fas fa-user"></i>
-              <strong>Resultados</strong>
-            </h4>
-          </div>
-            
-          <div class="row">
-            <div class="container">
-              <% if (matches.length > 0) { %>
-              <div class="list-group">
-                <% matches.forEach(function(match, index) { %>
-                <div class="list-group-item">
-                  <div class="row">
-                    <div class="col-2 float-left">
-                        <img src="<%= match.team1.flag %>" class="img-fluid rounded float-left">
-                    </div>
-                    <div class="col-8">
-                      <div class="row">
-                          <div class="col-5 text-right text-truncate">
-                              <span><%= match.team1.name %></span>
-                          </div>
-                          <div class="col-2 text-nowrap">
-                              <div class="mx-auto"><%= match.score1 %> x <%= match.score2 %></div>
-                          </div>
-                          <div class="col-5 text-left text-truncate">
-                              <span><%= match.team2.name %></span>
-                          </div>
-                      </div>
-                    </div>
-                    <div class="col-2 float-right">
-                        <img src="<%= match.team2.flag %>" class="img-fluid rounded float-right">
-                    </div>
-                  </div>
-                </div>
-                <% });  %>
-              </div>
-              <% } else { %>
-                <div class="row">Nenhum resultado.</div>
-              <% } %>
-            </div>
-          </div>
+    <% include ./partials/header %>
+
+    <div class="page-box container d-flex flex-column">
+      <div>
+        <div class="d-flex align-self-center align-items-center p-2">
+          <i class="title-icon fas fa-clipboard-check"></i>
+          <h4 class="m-0">Resultados</h4>
         </div>
-      <% include ./partials/scripts %>
-    </body>
- </html>
+      </div>
+        
+      <div>
+        <div class="container-fluid d-flex flex-column">
+
+          <% if (matches.length > 0) { %>
+          
+            <% matches.forEach(function(match, index) { %>
+              <% include ./subviews/match-header-with-score %>
+            <% }); // matches.forEach  %>
+
+          <% } else { %>
+
+            <div>Nenhum resultado.</div>
+
+          <% } %>
+        
+        </div>
+      </div>
+    </div>
+
+    <% include ./partials/scripts %>
+  </body>
+</html>

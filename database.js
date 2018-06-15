@@ -23,7 +23,9 @@ function getGuesses (game) {
         });
 
         guesses.sort(function(a, b) {
-                return (a.guess.score2 - b.guess.score2) - (a.guess.score1 - b.guess.score1);
+                if (a.name < b.name) return -1;
+                if (a.name > b.name) return 1;
+                return 0;
         });
 
         return guesses;
@@ -63,15 +65,11 @@ exports.getPoints = function () {
                                 var guesses = getGuesses(match.num);
 
                                 guesses.forEach(function(entry, index) {
-                                        var guessResult = {};
-                                        if (points[entry.id] === undefined)
-                                        {
-                                                guessResult = {
-                                                        name: people[entry.id].name,
-                                                        photo: people[entry.id].photo,
-                                                        guess: people[entry.id].guesses[match.num],
-                                                        points: 0
-                                                }
+                                        var guessResult =  {
+                                                name: people[entry.id].name,
+                                                photo: people[entry.id].photo,
+                                                guess: people[entry.id].guesses[match.num],
+                                                points: 0
                                         }
         
                                         if (match.score1 !== null && match.score2 !== null)
@@ -103,6 +101,7 @@ exports.getPoints = function () {
                                 var date = new Date(Date.parse(match.date + " " + match.time + " " + match.timezone));
 
                                 var object = {
+                                        'id': match.num,
                                         'team1': countries[match.team1.code],
                                         'team2': countries[match.team2.code],
                                         'time': date,
@@ -127,6 +126,7 @@ exports.getMatches = function (startDate, endDate) {
                         if (date >= startDate && date < endDate) 
                         {
                                 var object = {
+                                        'id': match.num,
                                         'team1': countries[match.team1.code],
                                         'team2': countries[match.team2.code],
                                         'time': date,

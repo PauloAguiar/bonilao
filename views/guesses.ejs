@@ -3,63 +3,45 @@
   <% include ./partials/head %>
   <body>
     <% include ./partials/header %>
-    <div class="container">
-        <div class="row">
-          <h4 class="d-flex align-items-center">
-            <i class="title-icon fas fa-user"></i>
-            <strong>Palpites</strong><span> (prox. 24 hrs)</span>
-          </h4>
+    <div class="page-box container d-flex flex-column">
+        <div>
+          <div class="d-flex align-self-center align-items-center p-2">
+            <i class="title-icon fas fa-eye"></i>
+            <h4 class="m-0">Palpites<small class="text-muted pl-3">Prox. 24h</small> </h4>
+          </div>
         </div>
           
-        <div class="row">
-          <div class="container">
-            <div class="list-group">
-              <% matches.forEach(function(match, index) { %>
-              <div class="list-group-item">
-                <div class="row">
-                  <div class="col-2 float-left">
-                      <img src="<%= match.team1.flag %>" class="img-fluid rounded float-left">
-                  </div>
-                  <div class="col-8">
-                    <div class="row mb-2">
-                        <div class="col-5 text-truncate text-center">
-                            <span><%= match.team1.name %></span>
-                        </div>
-                        <div class="col-2 text-center">
-                            <span>x</span>
-                        </div>
-                        <div class="col-5 text-truncate text-center">
-                            <span><%= match.team2.name %></span>
-                        </div>
-                    </div>
-                    <% if (match.guesses.length > 0) { %>
-                    <% match.guesses.forEach(function(entry, index) { %>
-                    <div class="row">
-                        <div class="mb-1 p-0 col-2 float-left">
-                            <img src="<%= entry.photo %>" class="img-fluid rounded">
-                        </div>
-                        <div class="col-7 text-truncate text-center">
-                            <span class="guess-name"><%= entry.name %></span>
-                        </div>
-                        <div class="col-3 text-nowrap float-left">
-                            <span class="guess-score"><%= entry.guess.score1 %> x <%= entry.guess.score2 %></span>
-                        </div>
-                    </div>
-                    <% }); %>
-                    <% } else { %>
-                        <span>Nenhum palpite.</span>
-                    <% } %>
-                  </div>
-                  <div class="col-2 float-left">
-                      <img src="<%= match.team2.flag %>" class="img-fluid rounded float-left">
-                  </div>
-                </div>
-              </div>
-              <% }); %>
+      <div id="accordion">
+        
+        <% matches.forEach(function(match, index) { %>
+
+        <div class="card mb-1">
+
+          <div class="card-header p-0" id="heading-match-<%= match.id %>">
+              <button class="btn btn-block" data-toggle="collapse" data-target="#collapse-match-<%= match.id %>" aria-expanded="true" aria-controls="collapse-match-<%= match.id %>">
+                  <% include ./subviews/match-header-no-score %>
+              </button>
+          </div>
+
+          <div id="collapse-match-<%= match.id %>" class="collapse" aria-labelledby="heading-match-<%= match.id %>" data-parent="#accordion">
+            <div class="card-body p-0">
+              <% if (match.guesses.length > 0) { %>
+
+                <% match.guesses.forEach(function(user, index) { %>
+                  <% include ./subviews/user-guess %>
+                <%  }); // match.guesses.forEach%>
+                
+              <% } else { %>
+                Nenhum palpite.
+              <% } %>
             </div>
           </div>
         </div>
+
+        <% }); // matches.forEach %>
+
       </div>
+    </div>
     <% include ./partials/scripts %>
   </body>
 </html>
