@@ -1,1 +1,1 @@
-Compress-Archive -Update -Path ./* -DestinationPath testService.zip
+Compress-Archive -Update -Path ./* -DestinationPath ../bonilaoPack.zip

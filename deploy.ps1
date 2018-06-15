@@ -10,7 +10,7 @@ if ($deployPassword -eq $null)
         exit
 }
 
-$filePath = "./testService.zip"
+$filePath = "../bonilaoPack.zip"
 $apiUrl = "https://bonilao.scm.azurewebsites.net/api/zipdeploy"
 $base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f $deployUsername, $deployPassword)))
 $userAgent = "powershell/1.0"
