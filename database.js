@@ -2,6 +2,7 @@ var request = require("request");
 var fs = require("fs");
 
 var matchesFile = fs.readFileSync("./data/matches.json");
+var scoreOverrideFile = fs.readFileSync("./data/score-overrides.json");
 var countriesFile = fs.readFileSync("./mapping/countries.json");
 var peopleFile = fs.readFileSync("./mapping/people.json");
 
@@ -10,6 +11,7 @@ var fifaIdToNumFile = fs.readFileSync("./mapping/fifa_id-to-num.json");
 var url = "http://worldcup.sfg.io/matches";
 
 var matchTable = JSON.parse(matchesFile);
+var scoreOverrideTable = JSON.parse(scoreOverrideFile);
 var countries = JSON.parse(countriesFile);
 var people = JSON.parse(peopleFile);
 var fifaIdToNumTable = JSON.parse(fifaIdToNumFile);
@@ -34,6 +36,16 @@ function updateResults() {
                 });
         }
 };
+
+function runOverrides(match)
+{
+        if (scoreOverrideTable[match.fifa_id] !== undefined)
+        {
+                match.home_team = scoreOverrideTable[match.fifa_id].home_team;
+                match.away_team = scoreOverrideTable[match.fifa_id].away_team;
+                match.status = scoreOverrideTable[match.fifa_id].status;
+        }
+}
 
 function getGuesses (game) {
         var guesses = []
@@ -82,8 +94,10 @@ exports.getResults = function () {
         var matches = getCompletedMatchTable();
 
         matches.forEach(match => {
-                var date = new Date(Date.parse(match.datetime));
+                runOverrides(match);
 
+                var date = new Date(Date.parse(match.datetime));
+                
                 var object = {
                         'team1': countries[match.home_team.code],
                         'team2': countries[match.away_team.code],
@@ -106,6 +120,8 @@ exports.getPoints = function () {
         var matches = getCompletedMatchTable();
 
         matches.forEach(match => {
+                runOverrides(match);
+
                 var points = [];
                 var gameId = fifaIdToNumTable[match.fifa_id];
                 var guesses = getGuesses(gameId);
@@ -166,6 +182,8 @@ exports.getMatches = function (startDate, endDate) {
         var matches = getUpcomingMatches();
 
         matches.forEach(match => {
+                runOverrides(match);
+
                 var object = {
                         'id': match.fifa_id,
                         'team1': countries[match.home_team.code],
@@ -190,6 +208,8 @@ exports.getRankings = function() {
         var matches = getCompletedMatchTable();
 
         matches.forEach(match => {
+                runOverrides(match);
+                
                 var guesses = getGuesses(fifaIdToNumTable[match.fifa_id]);
 
                 guesses.forEach(function(entry, index) {
