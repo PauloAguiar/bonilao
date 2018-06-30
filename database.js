@@ -134,18 +134,42 @@ exports.getPoints = function () {
                                 points: 0
                         }
 
-                        if (match.home_team.goals === user.guess.score1 && match.away_team.goals === user.guess.score2)
+                        if (gameId > 48)
                         {
-                                guessResult.points = 6;
+                                if (match.home_team.goals === user.guess.score1 && match.away_team.goals === user.guess.score2)
+                                {
+                                        guessResult.points = 10;
+                                }
+                                else 
+                                {
+                                        if ((match.home_team.goals - match.away_team.goals > 0 && user.guess.score1 - user.guess.score2 > 0)
+                                            || (match.home_team.goals - match.away_team.goals < 0 && user.guess.score1 - user.guess.score2 < 0)
+                                            || (match.home_team.goals === match.away_team.goals && user.guess.score1 === user.guess.score2))
+                                        {
+                                                guessResult.points += 5;
+                                        }
+
+                                        if (match.home_team.goals === user.guess.score1 || match.away_team.goals === user.guess.score2)
+                                        {
+                                                guessResult.points += 1;
+                                        }
+                                }
                         }
-                        else if ((match.home_team.goals - match.away_team.goals > 0
-                                        && user.guess.score1 - user.guess.score2 > 0)
-                                || (match.home_team.goals - match.away_team.goals < 0
-                                        && user.guess.score1 - user.guess.score2 < 0)
-                                || (match.home_team.goals === match.away_team.goals
-                                        && user.guess.score1 === user.guess.score2))
+                        else
                         {
-                                guessResult.points = 3;
+                                if (match.home_team.goals === user.guess.score1 && match.away_team.goals === user.guess.score2)
+                                {
+                                        guessResult.points = 6;
+                                }
+                                else if ((match.home_team.goals - match.away_team.goals > 0
+                                                && user.guess.score1 - user.guess.score2 > 0)
+                                        || (match.home_team.goals - match.away_team.goals < 0
+                                                && user.guess.score1 - user.guess.score2 < 0)
+                                        || (match.home_team.goals === match.away_team.goals
+                                                && user.guess.score1 === user.guess.score2))
+                                {
+                                        guessResult.points = 3;
+                                }
                         }
 
                         points.push(guessResult);
@@ -209,8 +233,8 @@ exports.getRankings = function() {
 
         matches.forEach(match => {
                 runOverrides(match);
-                
-                var guesses = getGuesses(fifaIdToNumTable[match.fifa_id]);
+                var gameId = fifaIdToNumTable[match.fifa_id];
+                var guesses = getGuesses(gameId);
 
                 guesses.forEach(function(entry, index) {
                         if (points[entry.id] === undefined)
@@ -222,18 +246,42 @@ exports.getRankings = function() {
                                 }
                         }
 
-                        if (match.home_team.goals === entry.guess.score1 && match.away_team.goals === entry.guess.score2)
+                        if (gameId > 48)
                         {
-                                points[entry.id].points += 6;
+                                if (match.home_team.goals === entry.guess.score1 && match.away_team.goals === entry.guess.score2)
+                                {
+                                        points[entry.id].points += 10;
+                                }
+                                else 
+                                {
+                                        if ((match.home_team.goals - match.away_team.goals > 0 && entry.guess.score1 - entry.guess.score2 > 0)
+                                            || (match.home_team.goals - match.away_team.goals < 0 && entry.guess.score1 - entry.guess.score2 < 0)
+                                            || (match.home_team.goals === match.away_team.goals && entry.guess.score1 === entry.guess.score2))
+                                        {
+                                                points[entry.id].points += 5;
+                                        }
+
+                                        if (match.home_team.goals === entry.guess.score1 || match.away_team.goals === entry.guess.score2)
+                                        {
+                                                points[entry.id].points += 1;
+                                        }
+                                }
                         }
-                        else if ((match.home_team.goals - match.away_team.goals > 0
-                                        && entry.guess.score1 - entry.guess.score2 > 0)
-                                || (match.home_team.goals - match.away_team.goals < 0
-                                        && entry.guess.score1 - entry.guess.score2 < 0)
-                                || (match.home_team.goals === match.away_team.goals
-                                        && entry.guess.score1 === entry.guess.score2))
+                        else
                         {
-                                points[entry.id].points += 3;
+                                if (match.home_team.goals === entry.guess.score1 && match.away_team.goals === entry.guess.score2)
+                                {
+                                        points[entry.id].points += 6;
+                                }
+                                else if ((match.home_team.goals - match.away_team.goals > 0
+                                                && entry.guess.score1 - entry.guess.score2 > 0)
+                                        || (match.home_team.goals - match.away_team.goals < 0
+                                                && entry.guess.score1 - entry.guess.score2 < 0)
+                                        || (match.home_team.goals === match.away_team.goals
+                                                && entry.guess.score1 === entry.guess.score2))
+                                {
+                                        points[entry.id].points += 3;
+                                }
                         }
                 });
         });
