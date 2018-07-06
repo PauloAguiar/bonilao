@@ -1955,6 +1955,22 @@
                 "name": "Boniex",
                 "photo": "img/photos/boniex.jpg",
                 "guesses": {
+                        "57": {
+                                "score1":1,
+                                "score2":2
+                        },
+                        "58": {
+                                "score1":2,
+                                "score2":1
+                        },
+                        "59": {
+                                "score1":1,
+                                "score2":2
+                        },
+                        "60": {
+                                "score1":1,
+                                "score2":2
+                        },
                         "1": {
                                 "score1": 1,
                                 "score2": 0
