@@ -3,6 +3,14 @@
                 "name": "Paulo Huo",
                 "photo": "img/photos/paulo.jpg",
                 "guesses": {
+                        "61": {
+                                "score1":2,
+                                "score2":1
+                        },
+                        "62": {
+                                "score1":0,
+                                "score2":1
+                        },
                         "57": {
                                 "score1":1,
                                 "score2":2
@@ -249,6 +257,14 @@
                 "name": "Alice Rocha",
                 "photo": "img/photos/alice.jpg",
                 "guesses": {
+                        "61": {
+                                "score1":1,
+                                "score2":2
+                        },
+                        "62": {
+                                "score1":0,
+                                "score2":4
+                        },
                         "1": {
                                 "score1": 2,
                                 "score2": 0
@@ -495,6 +511,14 @@
                 "name": "Tropão",
                 "photo": "img/photos/tropao.jpg",
                 "guesses": {
+                        "61": {
+                                "score1":2,
+                                "score2":2
+                        },
+                        "62": {
+                                "score1":1,
+                                "score2":1
+                        },
                         "57": {
                                 "score1":1,
                                 "score2":2
@@ -741,6 +765,14 @@
                 "name": "Iuri Ninja",
                 "photo": "img/photos/ninja.jpg",
                 "guesses": {
+                        "61": {
+                                "score1":2,
+                                "score2":1
+                        },
+                        "62": {
+                                "score1":1,
+                                "score2":2
+                        },
                         "57": {
                                 "score1":1,
                                 "score2":2
@@ -987,6 +1019,14 @@
                 "name": "Giovanio Conrado",
                 "photo": "img/photos/bok.jpg",
                 "guesses": {
+                        "61": {
+                                "score1":1,
+                                "score2":1
+                        },
+                        "62": {
+                                "score1":2,
+                                "score2":1
+                        },
                         "57": {
                                 "score1":2,
                                 "score2":2
@@ -1233,6 +1273,14 @@
                 "name": "Lucas Korith",
                 "photo": "img/photos/korith.jpg",
                 "guesses": {
+                        "61": {
+                                "score1":3,
+                                "score2":2
+                        },
+                        "62": {
+                                "score1":2,
+                                "score2":1
+                        },
                         "57": {
                                 "score1":2,
                                 "score2":1
@@ -1709,6 +1757,14 @@
                 "name": "Ulysses",
                 "photo": "img/photos/ulysses.jpg",
                 "guesses": {
+                        "61": {
+                                "score1":3,
+                                "score2":2
+                        },
+                        "62": {
+                                "score1":1,
+                                "score2":2
+                        },
                         "57": {
                                 "score1":2,
                                 "score2":2
@@ -1955,6 +2011,14 @@
                 "name": "Boniex",
                 "photo": "img/photos/boniex.jpg",
                 "guesses": {
+                        "61": {
+                                "score1":2,
+                                "score2":1
+                        },
+                        "62": {
+                                "score1":0,
+                                "score2":2
+                        },
                         "57": {
                                 "score1":1,
                                 "score2":2
@@ -2201,6 +2265,14 @@
                 "name": "Giulian",
                 "photo": "img/photos/giulian.jpg",
                 "guesses": {
+                        "61": {
+                                "score1":2,
+                                "score2":1
+                        },
+                        "62": {
+                                "score1":2,
+                                "score2":2
+                        },
                         "57": {
                                 "score1":1,
                                 "score2":1
@@ -2447,6 +2519,14 @@
                 "name": "Leo Bug",
                 "photo": "img/photos/leobug.jpg",
                 "guesses": {
+                        "61": {
+                                "score1":2,
+                                "score2":1
+                        },
+                        "62": {
+                                "score1":0,
+                                "score2":1
+                        },
                         "57": {
                                 "score1":1,
                                 "score2":2
@@ -2693,6 +2773,14 @@
                 "name": "Vaia",
                 "photo": "img/photos/vaia.jpg",
                 "guesses": {
+                        "61": {
+                                "score1":2,
+                                "score2":2
+                        },
+                        "62": {
+                                "score1":1,
+                                "score2":2
+                        },
                         "57": {
                                 "score1":0,
                                 "score2":2
@@ -3185,6 +3273,14 @@
                 "name": "Gabriel",
                 "photo": "img/photos/gabriel.jpg",
                 "guesses": {
+                        "61": {
+                                "score1":0,
+                                "score2":2
+                        },
+                        "62": {
+                                "score1":2,
+                                "score2":0
+                        },
                         "1": {
                                 "score1": 0,
                                 "score2": 1
