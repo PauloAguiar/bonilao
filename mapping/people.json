@@ -2321,6 +2321,14 @@
                 "name": "Giulian",
                 "photo": "img/photos/giulian.jpg",
                 "guesses": {
+                        "63": {
+                                "score1":2,
+                                "score2":1
+                        },
+                        "64": {
+                                "score1":1,
+                                "score2":1
+                        },
                         "61": {
                                 "score1":2,
                                 "score2":1
